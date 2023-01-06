@@ -19,7 +19,6 @@ class Snake:
     def __init__(self):
         self.position = [(0, 2), (0, 1), (0, 0)]
         self.direction = ''
-        self.len = 3
 
     def move(self):
         self.head_position = self.position[0]
@@ -37,7 +36,6 @@ class Snake:
     def grow(self):
         self.tail_position = self.position[-1]
         y, x = self.tail_position
-        self.len += 1
 
         if self.direction == 'L':
             self.position = self.position[:] + [(y, x - 1)] # this line of code same as this self.position.append((y, x - 1))
